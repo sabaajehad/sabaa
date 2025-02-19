@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بيمبولو سيكيورتي | حلول الأمان المتكاملة</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-shield-alt"></i> بيمبولو سيكيورتي
+            </a>
+            <div class="datetime-display ms-2">
+                <span id="current-time"></span>
+                <span id="current-date"></span>
+                <span class="visitor-count">عدد الزيارات: <span id="visit-count">0</span></span>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">خدماتنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">منتجاتنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">نبذة عن الشركة</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">اتصل بنا</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-md-6">
+                    <h1>بيمبولو سيكيورتي</h1>
+                    <p class="lead">حلول أمنية متكاملة لحماية منشآتك على مدار الساعة</p>
+                    <a href="#contact" class="btn btn-primary btn-lg">
+                        <i class="fas fa-phone-alt me-2"></i>
+                        اتصل بنا
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">نبذة عن الشركة</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="about-text" data-readable>
+                        <p>بيمبولو سيكيورتي هي شركة رائدة في مجال الحلول الأمنية المتكاملة، نقدم خدمات احترافية في مجال تركيب وصيانة أنظمة الأمان. نحن نؤمن بأن الأمان حق أساسي للجميع، ونسعى لتوفير أحدث التقنيات وأفضل الحلول لعملائنا.</p>
+                        <p>مع خبرة تمتد لسنوات في المجال، نفخر بثقة عملائنا وقدرتنا على تلبية احتياجاتهم الأمنية المختلفة.</p>
+                    </div>
+                    <div class="text-controls mt-3">
+                        <button class="btn btn-primary me-2" onclick="toggleTextSize()">
+                            <i class="fas fa-text-height"></i> تكبير/تصغير النص
+                        </button>
+                        <button class="btn btn-secondary" onclick="readText(this.parentElement.previousElementSibling)">
+                            <i class="fas fa-volume-up"></i> قراءة النص
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="video-container">
+                        <iframe width="100%" height="315" 
+                            src="https://www.youtube.com/embed/ftmjIMgMLks" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-description mt-3" data-readable>
+                        <h4>خدماتنا الأمنية المتكاملة</h4>
+                        <ul>
+                            <li>أنظمة مراقبة متطورة</li>
+                            <li>حلول أمنية ذكية</li>
+                            <li>فريق متخصص ومدرب</li>
+                            <li>خدمة على مدار الساعة</li>
+                            <li>تقنيات حديثة وموثوقة</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">خدماتنا</h2>
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-search fa-3x mb-3"></i>
+                            <h3>تقييم المخاطر الأمنية</h3>
+                            <p>تقييم شامل للمخاطر الأمنية وتحديد نقاط الضعف</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-camera fa-3x mb-3"></i>
+                            <h3>تركيب الأنظمة الأمنية</h3>
+                            <p>تركيب أجهزة الإنذار وكاميرات المراقبة باحترافية</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-tools fa-3x mb-3"></i>
+                            <h3>الصيانة الدورية</h3>
+                            <p>صيانة دورية للأنظمة الأمنية لضمان كفاءتها</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-clock fa-3x mb-3"></i>
+                            <h3>مراقبة 24/7</h3>
+                            <p>مراقبة مستمرة على مدار الساعة لأنظمة الإنذار والكاميرات</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">حزم الأمان</h2>
+            <div class="row">
+                <!-- Basic Package -->
+                <div class="col-md-3 mb-4">
+                    <div class="card package-card h-100">
+                        <div class="card-header text-center">
+                            <h3>الحزمة الأساسية</h3>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success"></i> نظام إنذار أساسي</li>
+                                <li><i class="fas fa-check text-success"></i> مراقبة موضعية</li>
+                                <li><i class="fas fa-check text-success"></i> تخزين محلي للقطات</li>
+                                <li><i class="fas fa-times text-danger"></i> مراقبة مركزية</li>
+                            </ul>
+                            <button class="btn btn-primary w-100">طلب عرض سعر</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Standard Package -->
+                <div class="col-md-3 mb-4">
+                    <div class="card package-card h-100">
+                        <div class="card-header text-center">
+                            <h3>الحزمة القياسية</h3>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success"></i> نظام إنذار متقدم</li>
+                                <li><i class="fas fa-check text-success"></i> مراقبة عبر الإنترنت</li>
+                                <li><i class="fas fa-check text-success"></i> تخزين سحابي للقطات</li>
+                                <li><i class="fas fa-times text-danger"></i> مراقبة مركزية</li>
+                            </ul>
+                            <button class="btn btn-primary w-100">طلب عرض سعر</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Advanced Package -->
+                <div class="col-md-3 mb-4">
+                    <div class="card package-card h-100 featured">
+                        <div class="card-header text-center">
+                            <h3>الحزمة المتقدمة</h3>
+                            <span class="badge bg-primary">الأكثر طلباً</span>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success"></i> نظام إنذار متقدم</li>
+                                <li><i class="fas fa-check text-success"></i> مراقبة عبر الإنترنت</li>
+                                <li><i class="fas fa-check text-success"></i> تخزين سحابي للقطات</li>
+                                <li><i class="fas fa-check text-success"></i> مراقبة مركزية 24/7</li>
+                            </ul>
+                            <button class="btn btn-primary w-100">طلب عرض سعر</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Custom Package -->
+                <div class="col-md-3 mb-4">
+                    <div class="card package-card h-100">
+                        <div class="card-header text-center">
+                            <h3>الحزمة المخصصة</h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="text-center">نقدم حلولاً مخصصة حسب احتياجاتك الأمنية</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success"></i> تقييم شامل للمخاطر</li>
+                                <li><i class="fas fa-check text-success"></i> تخطيط مخصص</li>
+                                <li><i class="fas fa-check text-success"></i> حلول متكاملة</li>
+                            </ul>
+                            <button class="btn btn-primary w-100">اطلب موعداً للتقييم</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">منتجاتنا</h2>
+            <div class="row">
+                <!-- CCTV Cameras -->
+                <div class="col-md-4 mb-4">
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9" class="card-img-top" alt="كاميرات مراقبة">
+                        <div class="card-body">
+                            <h3>كاميرات مراقبة IP عالية الدقة</h3>
+                            <div class="specs">
+                                <p><i class="fas fa-check"></i> دقة 4K فائقة الوضوح</p>
+                                <p><i class="fas fa-check"></i> رؤية ليلية متطورة</p>
+                                <p><i class="fas fa-check"></i> مقاومة للماء والغبار</p>
+                                <p><i class="fas fa-check"></i> تتبع حركة ذكي</p>
+                            </div>
+                            <div class="price">
+                                <span class="amount">1,200 ريال</span>
+                                <span class="unit">/ للكاميرا</span>
+                            </div>
+                            <button class="btn btn-primary w-100">اطلب الآن</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Alarm System -->
+                <div class="col-md-4 mb-4">
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1558959356-2f8a11c5601e" class="card-img-top" alt="نظام إنذار">
+                        <div class="card-body">
+                            <h3>نظام إنذار ذكي</h3>
+                            <div class="specs">
+                                <p><i class="fas fa-check"></i> حساسات حركة متطورة</p>
+                                <p><i class="fas fa-check"></i> تنبيهات فورية على الجوال</p>
+                                <p><i class="fas fa-check"></i> نظام إنذار صوتي قوي</p>
+                                <p><i class="fas fa-check"></i> بطارية احتياطية</p>
+                            </div>
+                            <div class="price">
+                                <span class="amount">2,500 ريال</span>
+                                <span class="unit">/ للنظام الكامل</span>
+                            </div>
+                            <button class="btn btn-primary w-100">اطلب الآن</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Access Control -->
+                <div class="col-md-4 mb-4">
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1541873676-a18131494184" class="card-img-top" alt="نظام تحكم بالدخول">
+                        <div class="card-body">
+                            <h3>نظام تحكم بالدخول</h3>
+                            <div class="specs">
+                                <p><i class="fas fa-check"></i> بصمة وجه وإصبع</p>
+                                <p><i class="fas fa-check"></i> لوحة مفاتيح رقمية</p>
+                                <p><i class="fas fa-check"></i> تطبيق تحكم عن بعد</p>
+                                <p><i class="fas fa-check"></i> سجل دخول مفصل</p>
+                            </div>
+                            <div class="price">
+                                <span class="amount">3,500 ريال</span>
+                                <span class="unit">/ للوحدة</span>
+                            </div>
+                            <button class="btn btn-primary w-100">اطلب الآن</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">اتصل بنا</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="contact-info mb-4" data-readable>
+                        <h3>معلومات الاتصال</h3>
+                        <p>
+                            <i class="fas fa-map-marker-alt me-2"></i> العنوان: المملكة الأردنية الهاشمية - عمان<br>
+                            <i class="fas fa-mobile-alt me-2"></i> موبايل: 0770997708<br>
+                            <i class="fas fa-envelope me-2"></i> البريد الإلكتروني: engfaten1111@gmail.com
+                        </p>
+                        <div class="working-hours mt-4" data-readable>
+                            <h4>ساعات العمل:</h4>
+                            <p>الأحد - الخميس: 9:00 صباحاً - 5:00 مساءً</p>
+                            <p>الجمعة - السبت: مغلق</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="contact-form">
+                        <h3 class="mb-4">حجز موعد للتقييم والتخطيط</h3>
+                        <form id="appointmentForm">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">الاسم الكامل</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">رقم الجوال</label>
+                                <input type="tel" class="form-control" id="phone" name="phone" 
+                                    pattern="[0-9]{10}" 
+                                    placeholder="مثال: 0770997708"
+                                    required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">البريد الإلكتروني</label>
+                                <input type="email" class="form-control" id="email" name="email" 
+                                    placeholder="engfaten1111@gmail.com"
+                                    required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="serviceType" class="form-label">نوع الخدمة المطلوبة</label>
+                                <select class="form-select" id="serviceType" name="serviceType" required>
+                                    <option value="">اختر الخدمة</option>
+                                    <option value="security-assessment">تقييم المخاطر الأمنية</option>
+                                    <option value="installation">تركيب أنظمة أمنية</option>
+                                    <option value="maintenance">صيانة الأنظمة الحالية</option>
+                                    <option value="monitoring">خدمة المراقبة 24/7</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="preferredDate" class="form-label">التاريخ المفضل للزيارة</label>
+                                <input type="date" class="form-control" id="preferredDate" name="preferredDate" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="preferredTime" class="form-label">الوقت المفضل</label>
+                                <select class="form-select" id="preferredTime" name="preferredTime" required>
+                                    <option value="">اختر الوقت</option>
+                                    <option value="morning">صباحاً (9:00 - 12:00)</option>
+                                    <option value="afternoon">ظهراً (12:00 - 3:00)</option>
+                                    <option value="evening">مساءً (3:00 - 5:00)</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="location" class="form-label">عنوان الموقع</label>
+                                <textarea class="form-control" id="location" name="location" rows="2" required></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="notes" class="form-label">ملاحظات إضافية</label>
+                                <textarea class="form-control" id="notes" name="notes" rows="3"></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    <i class="fas fa-calendar-check me-2"></i>
+                                    طلب موعد
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Survey Modal -->
+    <div class="modal fade" id="surveyModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">استبيان تحسين خدماتنا</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="surveyForm">
+                        <div class="mb-3">
+                            <label class="form-label">ما مدى رضاك عن موقعنا؟</label>
+                            <div class="rating">
+                                <input type="radio" name="satisfaction" value="5" id="star5"><label for="star5">★</label>
+                                <input type="radio" name="satisfaction" value="4" id="star4"><label for="star4">★</label>
+                                <input type="radio" name="satisfaction" value="3" id="star3"><label for="star3">★</label>
+                                <input type="radio" name="satisfaction" value="2" id="star2"><label for="star2">★</label>
+                                <input type="radio" name="satisfaction" value="1" id="star1"><label for="star1">★</label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">ما هي الخدمات التي تهمك أكثر؟</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="cameras" id="service1">
+                                <label class="form-check-label" for="service1">كاميرات المراقبة</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="alarms" id="service2">
+                                <label class="form-check-label" for="service2">أنظمة الإنذار</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="access" id="service3">
+                                <label class="form-check-label" for="service3">التحكم بالدخول</label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">كيف يمكننا تحسين خدماتنا؟</label>
+                            <textarea class="form-control" rows="3" name="suggestions"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                    <button type="button" class="btn btn-primary" id="submitSurvey">إرسال</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feedback Button -->
+    <button class="feedback-btn" data-bs-toggle="modal" data-bs-target="#surveyModal">
+        <i class="fas fa-comments"></i> شاركنا رأيك
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6" data-readable>
+                    <h5>تواصل معنا</h5>
+                    <p>
+                        <i class="fas fa-map-marker-alt me-2"></i> العنوان: المملكة الأردنية الهاشمية - عمان<br>
+                        <i class="fas fa-mobile-alt me-2"></i> موبايل: 0770997708<br>
+                        <i class="fas fa-envelope me-2"></i> البريد الإلكتروني: engfaten1111@gmail.com
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>جميع الحقوق محفوظة &copy; 2025 بيمبولو سيكيورتي</p>
+                    <p class="mb-0">
+                        <small>عدد الزيارات: <span id="visit-counter">0</span></small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منتجاتنا - بيمبولو سيكيورتي</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- القائمة العلوية -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">بيمبولو سيكيورتي</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">خدماتنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="products.html">منتجاتنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">نبذة عنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">اتصل بنا</a>
+                    </li>
+                </ul>
+                <div class="navbar-nav ms-auto">
+                    <select class="currency-selector" onchange="changeCurrency(this.value)">
+                        <option value="JOD">دينار أردني</option>
+                        <option value="USD">دولار أمريكي</option>
+                        <option value="EUR">يورو</option>
+                        <option value="SAR">ريال سعودي</option>
+                    </select>
+                    <button class="btn btn-outline-light position-relative" onclick="toggleCart()">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-badge" id="cart-count">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- محتوى الصفحة -->
+    <div class="container mt-5 pt-5">
+        <h1 class="text-center mb-5" data-readable>منتجاتنا</h1>
+        
+        <div class="row">
+            <!-- كاميرات المراقبة -->
+            <div class="col-md-4 mb-4">
+                <div class="product-card card h-100">
+                    <img src="images/products/cctv.jpg" class="card-img-top zoomable-image" alt="كاميرا مراقبة">
+                    <div class="card-body" data-readable>
+                        <h3>كاميرات المراقبة</h3>
+                        <p class="product-price" data-base-price="299.99">299.99 د.أ</p>
+                        <ul>
+                            <li>دقة 4K فائقة الوضوح</li>
+                            <li>رؤية ليلية متطورة</li>
+                            <li>مقاومة للماء والغبار</li>
+                            <li>تتبع الحركة الذكي</li>
+                        </ul>
+                        <button class="btn btn-primary mt-3" onclick="addToCart('cam1', 'كاميرا مراقبة 4K', 299.99)">
+                            <i class="fas fa-cart-plus me-2"></i>أضف إلى السلة
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- أجهزة الإنذار -->
+            <div class="col-md-4 mb-4">
+                <div class="product-card card h-100">
+                    <img src="images/products/alarm.jpg" class="card-img-top zoomable-image" alt="جهاز إنذار">
+                    <div class="card-body" data-readable>
+                        <h3>أجهزة الإنذار</h3>
+                        <p class="product-price" data-base-price="199.99">199.99 د.أ</p>
+                        <ul>
+                            <li>حساسات حركة متطورة</li>
+                            <li>إنذار صوتي قوي</li>
+                            <li>اتصال تلقائي بالطوارئ</li>
+                            <li>بطارية احتياطية</li>
+                        </ul>
+                        <button class="btn btn-primary mt-3" onclick="addToCart('alarm1', 'جهاز إنذار', 199.99)">
+                            <i class="fas fa-cart-plus me-2"></i>أضف إلى السلة
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- أقفال ذكية -->
+            <div class="col-md-4 mb-4">
+                <div class="product-card card h-100">
+                    <img src="images/products/8.jpg" class="card-img-top zoomable-image" alt="قفل ذكي">
+                    <div class="card-body" data-readable>
+                        <h3>أقفال ذكية</h3>
+                        <p class="product-price" data-base-price="149.99">149.99 د.أ</p>
+                        <ul>
+                            <li>فتح ببصمة الإصبع</li>
+                            <li>تحكم عبر الهاتف</li>
+                            <li>سجل دخول مفصل</li>
+                            <li>تشفير متقدم</li>
+                        </ul>
+                        <button class="btn btn-primary mt-3" onclick="addToCart('lock1', 'قفل ذكي', 149.99)">
+                            <i class="fas fa-cart-plus me-2"></i>أضف إلى السلة
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- سلة المشتريات الجانبية -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>سلة المشتريات</h3>
+            <button class="cart-close" onclick="toggleCart()">&times;</button>
+        </div>
+        <div id="cart-items">
+            <!-- ستتم إضافة عناصر السلة هنا بواسطة JavaScript -->
+        </div>
+        <div class="cart-total">
+            <h4>المجموع: <span id="cart-total">0.00 د.أ</span></h4>
+            <button class="btn btn-success w-100 mt-3">إتمام الشراء</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6" data-readable>
+                    <h5>تواصل معنا</h5>
+                    <p>
+                        <i class="fas fa-map-marker-alt me-2"></i> العنوان: المملكة الأردنية الهاشمية - عمان<br>
+                        <i class="fas fa-mobile-alt me-2"></i> موبايل: 0770997708<br>
+                        <i class="fas fa-envelope me-2"></i> البريد الإلكتروني: engfaten1111@gmail.com
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>جميع الحقوق محفوظة 2025 بيمبولو سيكيورتي</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
